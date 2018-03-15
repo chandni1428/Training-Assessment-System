@@ -1,0 +1,96 @@
+<button class="btn btn-primary" (click)="openModal(null,null,template)">Add Questions</button>
+
+<ng-template #template>
+  <form class="que-form form-horizontal" #queForm="ngForm">
+    <div class="modal-header">
+      <h4 class="modal-title pull-right">Questions</h4>
+      <button type="button" class="close pull-right" (click)="modalRef.hide()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <fieldset>
+        <input type="hidden" name="id" #id="ngModel" [(ngModel)]="questionObj.id">
+        <div class="form-group input-group col-md-12">
+            <label class="col-md-3 control-label" for="questionT">Enter Question</label>
+          <div class="col-md-9">
+            <input id="queText" [(ngModel)]="questionObj.queTitle" name="queText" type="text" placeholder="Enter Question" class="form-control input-md"
+              required="">
+          </div>
+        </div>
+        <div class="form-group input-group col-md-12">
+            <label class="col-md-2 control-label" for="optionA">Option A</label>
+          <input type="text" name="optionA" [(ngModel)]="questionObj.Options[0].opt" class="form-control" placeholder="Enter Option A">
+        </div>
+        <div class="form-group input-group col-md-12">
+            <label class="col-md-2 control-label" for="optionB">Option B</label>
+          <input type="text" name="optionB" [(ngModel)]="questionObj.Options[1].opt" class="form-control" placeholder="Enter Option B">
+        </div>
+        <div class="form-group input-group col-md-12">
+            <label class="col-md-2 control-label" for="optionC">Option C</label>
+          <input type="text" name="optionC" [(ngModel)]="questionObj.Options[2].opt" class="form-control" placeholder="Enter Option C">
+        </div>
+        <div class="form-group input-group col-md-12">
+            <label class="col-md-2 control-label" for="optionD">Option D</label>
+          <input type="text" name="optionD" [(ngModel)]="questionObj.Options[3].opt" class="form-control" placeholder="Enter Option D">
+        </div>
+        <div class="form-group input-group col-md-12">
+            <label class="col-md-3 control-label" for="correctAns">Select Correct Answer</label>
+          <select name="answer" class="form-control" [(ngModel)]="questionObj.correctAns" placeholder="Select correct Answer" >
+            <option value="">---Select Correct Answer---</option>
+            <option value="A">Option A</option>
+            <option value="B">Option B</option>
+            <option value="C">Option C</option>
+            <option value="D">Option D</option>
+          </select>
+        </div>
+      </fieldset>
+    </div>
+    <div class="modal-footer">
+      <button id="btnAdd" [disabled]="!queForm.valid" name="btnAdd" (click)="onAdd()" class="btn btn-success">SAVE</button>
+      <button id="btncancel" name="btnAdd" (click)="onCancel()" class="btn btn-danger">CANCEL</button>
+      <button type="button" id="btnCancel" name="btnCancel" class="btn btn-info" aria-hidden="true" (click)="resetForm(queForm)">RESET</button>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #template1>
+  <div class="modal-body text-center">
+    <p>Are you Sure?</p>
+    <button type="button" class="btn btn-default" (click)="onConfirm(template1)">Yes</button>
+    <button type="button" class="btn btn-primary" (click)="onCancel(template1)">No</button>
+  </div>
+</ng-template>
+
+
+  <table class='table table-bordered table-condensed table-hover table-stripped'>
+    <thead>
+      <tr>
+        <th>Question Title</th>
+        <th>Correct Answer</th>
+        <th>Option A</th>
+        <th>Option B</th>
+        <th>Option C</th>
+        <th>Option D</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let que of questionList  | paginate: { itemsPerPage:5 , currentPage:p } ; let i = index">
+        <td>{{que.queTitle}}</td>
+        <td>Option- {{que.correctAns}}</td>
+        <td *ngFor="let option of que.Options">{{option.opt}}</td>
+        <td>
+          <a class="btn" (click)="onEditClick(i,que,template)">
+            <!-- <i class="glyphicon glyphicon-pencil">Edit</i> -->
+            <i class="fas fa-edit"></i>
+          </a>
+          <a class="btn" (click)="openModal( i,que, template1)">
+            <!-- <i class="glyphicon glyphicon-trash">Delete</i> -->
+            <i class="fas fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>

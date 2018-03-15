@@ -1,0 +1,148 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Chandni",
+      "lastName": "Surve",
+      "eMail": "chandnisurve14@gmail.com",
+      "contactNo": 7201889930,
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "firstName": "Sonu",
+      "lastName": "Surve",
+      "eMail": "sonusurve14@gmail.com",
+      "contactNo": 7016452610,
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "firstName": "Priya",
+      "lastName": "shah",
+      "eMail": "singh.priya@gmail.com",
+      "contactNo": 2367839059,
+      "role": "user",
+      "isActive": false
+    },
+    {
+      "id": 4,
+      "firstName": "Sonal",
+      "lastName": "Shah",
+      "eMail": "sonal.prajapati@gmail.com",
+      "contactNo": 7856987789,
+      "role": "user",
+      "isActive": false
+    },
+    {
+      "id": 5,
+      "firstName": "Chaitali",
+      "lastName": "Bijotkar",
+      "eMail": "chaitalibijotkar@gmail.com",
+      "contactNo": "7869596969",
+      "role": "user",
+      "isActive": false
+    },
+    {
+      "id": 6,
+      "firstName": "Chandni",
+      "lastName": "Solanki",
+      "eMail": "chandnisolanki@gmail.com",
+      "contactNo": "7879696996",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 7,
+      "firstName": "Chaitali",
+      "lastName": "Surve",
+      "eMail": "chaitubijotkar@gmail.com",
+      "contactNo": "7895677899",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 8,
+      "firstName": "Tapaswini",
+      "lastName": "Sabat",
+      "eMail": "tapaswinisabat@gmail.com",
+      "contactNo": "7896778698",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 9,
+      "firstName": "Richa",
+      "lastName": "Patel",
+      "eMail": "richapatel@gmail.com",
+      "contactNo": "7869455588",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 10,
+      "firstName": "Digu",
+      "lastName": "Patel",
+      "eMail": "digishapatel@gmail.com",
+      "contactNo": "7898795688",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 11,
+      "firstName": "Sonu",
+      "lastName": "Solanki",
+      "eMail": "sonusolanki@gmail.com",
+      "contactNo": "67868595899",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 12,
+      "firstName": "Chandni",
+      "lastName": "Surve",
+      "eMail": "chandnisurve14@gmail.com",
+      "contactNo": "7201889930",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": 13,
+      "firstName": "Hema",
+      "lastName": "Surve",
+      "eMail": "hemasurve@gmail.com",
+      "contactNo": "7859690008",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 14,
+      "firstName": "hemraj",
+      "lastName": "Solanki",
+      "eMail": "hemrajsolanki@gmil.com",
+      "contactNo": "7867999999",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 15,
+      "firstName": "Ravina",
+      "lastName": "bhayani",
+      "eMail": "ravinabhayani@gmail.com",
+      "contactNo": "7858688899",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 16,
+      "firstName": "Vedika",
+      "lastName": "Mahadik",
+      "eMail": "vedikamahadik@gmail.com",
+      "contactNo": "6789456677",
+      "role": "user",
+      "isActive": true
+    }
+  ]
+}

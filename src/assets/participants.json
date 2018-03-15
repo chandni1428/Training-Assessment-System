@@ -1,0 +1,28 @@
+{ "participant": [
+                {
+                    "firstName": "chaitali",
+                    "eMail": "chaitalibijotkar11@gmail.com",
+                    "contactNo": 8460595005
+                },
+                {
+                    "firstName": "chandni",
+                    "eMail": "chandnisurve14@gmail.com",
+                    "contactNo": 7890034561
+                },
+                {
+                    "firstName": "tapaswini",
+                    "eMail": "tapaswinisabat@gmail.com",
+                    "contactNo": 8656907638
+                },
+                {
+                    "firstName": "priya",
+                    "eMail": "priyasingh@gmail.com",
+                    "contactNo": 9045782690
+                },
+                {
+                    "firstName": "sonal",
+                    "eMail": "sonalprajapati@gmail.com",
+                    "contactNo": 7567902376
+                }
+            ]
+        }

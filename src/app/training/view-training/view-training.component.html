@@ -1,0 +1,95 @@
+<!-- training details -->
+  <br/>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <fieldset class="col-md-12">
+        <legend>Training Details:</legend>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">Training Name: <span>{{training.trainingName}}</span> </li>
+              <li class="list-group-item">Trainer's Name: <span>{{training.trainerName}}</span></li>
+              <li class="list-group-item">Start Date: <span>{{training.startDate}}</span> </li>
+              <li class="list-group-item">End Date: <span>{{training.endDate}}</span></li>
+              <li class="list-group-item">Start Time: <span>{{training.startTime}}</span></li>
+              <li class="list-group-item">End Time: <span>{{training.endTime}}</span></li>
+            </ul>
+          </div>
+        </div>
+      </fieldset>
+      <div class="clearfix"></div>
+    </div>
+
+  </div>
+<!-- participants details -->
+  <br/>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <fieldset class="col-md-12">
+        <legend>Participant Details:</legend>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <ul class="list-group">
+
+              <table class='table table-bordered table-condensed table-hover table-stripped'>
+                <thead>
+                  <tr>
+                    <th>First Name</th>
+                    <th>Email</th>
+                    <th>Contact Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let participant of training.participants" >
+                    <td>{{participant.firstName}}</td>
+                    <td>{{participant.eMail}}</td>
+                    <td>{{participant.contactNo}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </ul>
+          </div>
+        </div>
+      </fieldset>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <br/>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <fieldset class="col-md-12">
+        <legend>Question:</legend>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <ul class="list-group">
+              
+              <table class='table table-bordered table-condensed table-hover table-stripped'> 
+                <thead>
+                  <tr>
+                    <th>Question Title</th>
+                    <th>Correct Answer</th>
+                    <th>Option A</th>
+                    <th>Option B</th>
+                    <th>Option C</th>
+                    <th>Option D</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let que of training.questions">
+                    <td>{{que.queTitle}}</td>
+                    <td>Option - {{que.correctAns}}</td>
+                    <td *ngFor="let option of que.Options">{{option.opt}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            </ul>
+          </div>
+        </div>
+      </fieldset>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+<button class="btn btn-lg btn-primary col-md-2" routerLink="/training">Back</button>

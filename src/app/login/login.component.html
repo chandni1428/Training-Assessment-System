@@ -1,0 +1,13 @@
+<div class="card card-container">
+	<form class="form-login">
+		<label>LOGIN</label>
+		<br>
+		<span id="reauth-email" class="reauth-email"></span>
+		<input type="email" [(ngModel)]='id' name="id" class="form-control" placeholder="Email address" required autofocus>
+		<br>
+		<input type="password" [(ngModel)]='password' name="password" class="form-control" placeholder="Password" required>
+		<br>
+		<br>
+		<button class="btn btn-lg btn-primary btn-block btn-login" (click)="Login()">LOGIN</button>
+	</form>
+</div>

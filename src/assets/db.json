@@ -1,0 +1,353 @@
+{
+  "Login": [
+    {
+      "id": "1",
+      "name": "rspl@rishabhsoft.com",
+      "password": "admin"
+    }
+  ],
+  "edit": [
+    {
+      "id": "1",
+      "firstName": "Chandan",
+      "lastName": "Bhatawadekar",
+      "contactNo": "9510250766"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Chandni",
+      "lastName": "Surve",
+      "eMail": "chandnisurve14@gmail.com",
+      "contactNo": 7201889930,
+      "role": "admin",
+      "isActive": false
+    },
+    {
+      "id": 2,
+      "firstName": "Sonu",
+      "lastName": "Surve",
+      "eMail": "sonusurve14@gmail.com",
+      "contactNo": 7016452610,
+      "role": "user",
+      "isActive": false
+    },
+    {
+      "id": 3,
+      "firstName": "Priya",
+      "lastName": "Singh",
+      "eMail": "singh.priya@gmail.com",
+      "contactNo": 2367839059,
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "firstName": "Sonal",
+      "lastName": "prajapati",
+      "eMail": "sonal.prajapati@gmail.com",
+      "contactNo": 7856987789,
+      "role": "user",
+      "isActive": false
+    },
+    {
+      "id": 5,
+      "firstName": "Chaitali",
+      "lastName": "Bijotkar",
+      "eMail": "chaitalibijotkar@gmail.com",
+      "contactNo": "7869596969",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "firstName": "Chaitali",
+      "lastName": "Bijotkar",
+      "eMail": "chaitalibijotkar11@gmail.com",
+      "contactNo": "6768788880",
+      "role": "user",
+      "isActive": false
+    }
+  ],
+  "training": [
+    {
+      "id": 1,
+      "trainingName": "Angular",
+      "trainerName": "Chaitali",
+      "status": true,
+      "startDate": "2018-03-10",
+      "endDate": "2018-03-15",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "isSubmitted": true,
+      "participants": [
+        {
+          "id": 3,
+          "firstName": "Priya",
+          "lastName": "patel",
+          "eMail": "singh.priya@gmail.com",
+          "contactNo": 2367839059,
+          "role": "user",
+          "isActive": false,
+          "selected": true
+        },
+        {
+          "id": 4,
+          "firstName": "Sonal",
+          "lastName": "prajapati",
+          "eMail": "sonal.prajapati@gmail.com",
+          "contactNo": 7856987789,
+          "role": "user",
+          "isActive": false,
+          "selected": true
+        },
+        {
+          "id": 5,
+          "firstName": "Chaitali",
+          "lastName": "Bijotkar",
+          "eMail": "chaitalibijotkar@gmail.com",
+          "contactNo": "7869596969",
+          "role": "user",
+          "isActive": false,
+          "selected": true
+        }
+      ],
+      "questions": [
+        {
+          "queTitle": "Ques1",
+          "Options": [
+            {
+              "opt": "A"
+            },
+            {
+              "opt": "B"
+            },
+            {
+              "opt": "C"
+            },
+            {
+              "opt": "D",
+              "isSelected": false
+            }
+          ],
+          "correctAns": "B"
+        },
+        {
+          "queTitle": "Ques2",
+          "Options": [
+            {
+              "opt": "x"
+            },
+            {
+              "opt": "y"
+            },
+            {
+              "opt": "z"
+            },
+            {
+              "opt": "w"
+            }
+          ],
+          "correctAns": "D"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "trainingName": "Java",
+      "trainerName": "Brinda",
+      "status": true,
+      "startDate": "2018-01-02",
+      "endDate": "2018-01-12",
+      "startTime": "01:00",
+      "endTime": "02:00",
+      "isSubmitted": true,
+      "participants": [
+        {
+          "id": 1,
+          "firstName": "Chandni",
+          "lastName": "Surve",
+          "eMail": "chandnisurve14@gmail.com",
+          "contactNo": 7201889930,
+          "role": "admin",
+          "isActive": true,
+          "selected": true
+        },
+        {
+          "id": 2,
+          "firstName": "Sonu",
+          "lastName": "Surve",
+          "eMail": "sonusurve14@gmail.com",
+          "contactNo": 7016452610,
+          "role": "user",
+          "isActive": true,
+          "selected": true
+        },
+        {
+          "id": 3,
+          "firstName": "Priya",
+          "lastName": "prajapati",
+          "eMail": "singh.priya@gmail.com",
+          "contactNo": 2367839059,
+          "role": "user",
+          "isActive": false,
+          "selected": true
+        },
+        {
+          "id": 4,
+          "firstName": "Sonal",
+          "lastName": "Shah",
+          "eMail": "sonal.prajapati@gmail.com",
+          "contactNo": 7856987789,
+          "role": "user",
+          "isActive": false,
+          "selected": true
+        },
+        {
+          "id": 5,
+          "firstName": "Chaitali",
+          "lastName": "Bijotkar",
+          "eMail": "chaitalibijotkar@gmail.com",
+          "contactNo": "7869596969",
+          "role": "user",
+          "isActive": false,
+          "selected": true
+        }
+      ],
+      "questions": [
+        {
+          "queTitle": "Question 1",
+          "Options": [
+            {
+              "opt": "A"
+            },
+            {
+              "opt": "B "
+            },
+            {
+              "opt": "C"
+            },
+            {
+              "opt": "D"
+            }
+          ],
+          "correctAns": "A"
+        },
+        {
+          "queTitle": "Question 2",
+          "Options": [
+            {
+              "opt": "A"
+            },
+            {
+              "opt": "B"
+            },
+            {
+              "opt": "C"
+            },
+            {
+              "opt": "D"
+            }
+          ],
+          "correctAns": "C"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "trainingName": "Magento",
+      "trainerName": "Richa Patel",
+      "status": true,
+      "startDate": "2018-03-12",
+      "endDate": "2018-03-15",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "isSubmitted": true,
+      "participants": [
+        {
+          "id": 1,
+          "firstName": "Chandni",
+          "lastName": "Surve",
+          "eMail": "chandnisurve14@gmail.com",
+          "contactNo": 7201889930,
+          "role": "admin",
+          "isActive": true,
+          "selected": true
+        },
+        {
+          "id": 4,
+          "firstName": "Sonal",
+          "lastName": "Shah",
+          "eMail": "sonal.prajapati@gmail.com",
+          "contactNo": 7856987789,
+          "role": "user",
+          "isActive": false,
+          "selected": true
+        },
+        {
+          "id": 5,
+          "firstName": "Chaitali",
+          "lastName": "Bijotkar",
+          "eMail": "chaitalibijotkar@gmail.com",
+          "contactNo": "7869596969",
+          "role": "user",
+          "isActive": true,
+          "selected": true
+        },
+        {
+          "id": 6,
+          "firstName": "Chandni",
+          "lastName": "Solanki",
+          "eMail": "chandnisolanki@gmail.com",
+          "contactNo": "7879696996",
+          "role": "user",
+          "isActive": false,
+          "selected": true
+        }
+      ],
+      "questions": [
+        {
+          "queTitle": "Question 1",
+          "Options": [
+            {
+              "opt": "a",
+              "isSelected": false
+            },
+            {
+              "opt": "b",
+              "isSelected": false
+            },
+            {
+              "opt": "c",
+              "isSelected": false
+            },
+            {
+              "opt": "d",
+              "isSelected": false
+            }
+          ],
+          "correctAns": "A"
+        },
+        {
+          "queTitle": "Question 2",
+          "Options": [
+            {
+              "opt": "A"
+            },
+            {
+              "opt": "b"
+            },
+            {
+              "opt": "C"
+            },
+            {
+              "opt": "D"
+            }
+          ],
+          "correctAns": "B"
+        }
+      ]
+    }
+  ]
+}

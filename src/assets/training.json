@@ -1,0 +1,18 @@
+{
+  "training": [
+    {
+      "id": 1,
+      "trainingName": "Angular",
+      "trainerName": "ABC",
+      "startDate": "2018-02-03",
+      "endDate": "2018-08-03"
+    },
+    {
+      "id": 2,
+      "trainingName": "java",
+      "trainerName": "XYZ",
+      "startDate": "05/05/2018",
+      "endDate": "15/05/2018"
+    }
+  ]
+}

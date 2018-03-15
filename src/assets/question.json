@@ -1,0 +1,48 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "queTitle": "Que4",
+      "Options": [
+        {
+          "opt": "Abccc",
+          "isSelected": false
+        },
+        {
+          "opt": "Bv",
+          "isSelected": false
+        },
+        {
+          "opt": "C",
+          "isSelected": false
+        },
+        {
+          "opt": "D",
+          "isSelected": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "queTitle": "Que1",
+      "Options": [
+        {
+          "opt": "ddh",
+          "isSelected": false
+        },
+        {
+          "opt": "shh",
+          "isSelected": false
+        },
+        {
+          "opt": "dmmm",
+          "isSelected": false
+        },
+        {
+          "opt": "sss",
+          "isSelected": false
+        }
+      ]
+    }
+  ]
+}

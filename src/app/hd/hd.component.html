@@ -1,0 +1,27 @@
+<div class="topnav">
+  <h2>
+      <B>
+        <i> TRAINING ASSESMENT SYSTEM</i>
+      </B>
+    
+  </h2>
+  <div></div>
+  <a routerLink="/dashboard">Home</a>
+  <a routerLink="/user-form">User-Managment</a>
+  <a routerLink="/training">Training</a>
+  <div class="nav navbar-nav navbar-right dropdown">
+    <button class="btn dropbtn">Admin</button>
+    <div class="dropdown-content ">
+      <nav>
+        <a>
+          <app-Editprofile></app-Editprofile>
+        </a>
+        <br>
+        <a routerLink="/change-password">Change Password</a>
+        <br>
+
+        <a class="clickable" (click)="onLogout()">Logout</a>
+      </nav>
+    </div>
+  </div>
+  <div class="clearfix"></div>

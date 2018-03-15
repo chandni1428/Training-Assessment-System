@@ -1,0 +1,51 @@
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <button class="btn btn-primary" routerLink="/trainingform">
+      Add Training
+    </button>
+    <table class='table table-bordered table-condensed table-hover table-stripped'>
+      <thead>
+        <tr>
+          <th>Training Name</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Is Submitted or not?</th>
+          <th>Send Activation Link</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let training of trainingList| paginate: { itemsPerPage:10 , currentPage:p }">
+          <td>{{training.trainingName }}</td>
+          <td>{{training.startDate}}</td>
+          <td>{{training.endDate}}</td>
+          <!-- custom pipe -->
+          <td [innerHTML]="training.isSubmitted | trainingStatus"></td>
+          <td>
+            <div *ngIf="training.isSubmitted && getTrainingEndDateFormat(training.endDate) ;else elseblock">
+              <a  class="clickable" style="text-decoration: underline; color:blue" (click)="sendLink()" >Send Activation Link</a>
+            </div>
+            <ng-template #elseblock></ng-template>
+          </td>
+          <td>
+            <ui-switch *ngIf="getTrainingEndDateFormat(training.endDate); else dategone" [(ngModel)]="training.status" (change)="onStatusChange(training)"></ui-switch>
+            <ng-template #dategone>
+              Closed
+            </ng-template>
+          </td>
+          <td>
+            <a [routerLink]="['/training',training.id]" *ngIf="training.status && getTrainingEndDateFormat(training.endDate)" class="btn">
+              <!-- <i class="glyphicon glyphicon-pencil">Edit</i> -->
+              <i class="fas fa-edit"></i>
+            </a>
+            <a class="btn" routerLink="/training-view/{{training.id}}">
+              <!-- <i class="glyphicon glyphicon-eye-open">View</i> -->
+              <i class="fas fa-eye"></i>
+            </a>
+          </td>
+          <!-- <td>{{training.isSubmitted}}</td> -->
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>

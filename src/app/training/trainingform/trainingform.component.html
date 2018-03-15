@@ -1,0 +1,124 @@
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<button id="training" *ngIf="!editMode" [disabled]="trainingDetailsAdded" type="button" class="btn btn-primary" (click)="openModal(template)">
+  ADD</button>
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">ADD TRAINING</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form class="emp-form form-horizontal" #trainingForm="ngForm">
+
+      <fieldset>
+        <input type="hidden" name="id" #id="ngModel" [(ngModel)]="training.id">
+        <div class="form-group">
+          <strong>
+            <label class="col-md-4 control-label" for="tName">Training Name</label>
+          </strong>
+          <div class="col-md-8">
+            <input class="form-control" placeholder="Training Name" name="trainingName" #trainingName="ngModel" [(ngModel)]="training.trainingName"
+              required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <strong>
+            <label class="col-md-4 control-label" for="trName">Trainer's Name</label>
+          </strong>
+          <div class="col-md-8">
+            <input class="form-control" name="trainerName" #trainerName="ngModel" [(ngModel)]="training.trainerName" placeholder="Trainer's Name"
+              required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <strong>
+            <label class="col-md-4 control-label" for="sTime">Start Date</label>
+          </strong>
+          <div class="col-md-8">
+            <input type="date" name="startDate" #startDate="ngModel" [(ngModel)]="training.startDate"
+              class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <strong>
+            <label class="col-md-4 control-label" for="eTime">End Date</label>
+          </strong>
+          <div class="col-md-8">
+            <input type="date" name="endDate" #endDate="ngModel" [(ngModel)]="training.endDate" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <strong>
+            <label class="col-md-4 control-label">Start Time</label>
+          </strong>
+          <div class="col-md-8">
+            <input type="time" name="startTime" #startTime="ngModel" [(ngModel)]="training.startTime" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <strong>
+            <label class="col-md-4 control-label">End Time</label>
+          </strong>
+          <div class="col-md-8">
+            <input type="time" name="endTime" #endTime="ngModel" [(ngModel)]="training.endTime" class="form-control">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="btnAdd" (click)="onTrainingDetailsAdd()" 
+            [disabled]="!trainingForm.valid" name="btnAdd" class="btn btn-success"
+            [disabled]="trainingForm.invalid">SAVE</button>
+          <button type="button" id="btnCancel" name="btnCancel" class="btn btn-danger" 
+          aria-hidden="true" (click)="onTrainigCancel()">CANCEL</button>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+</ng-template>
+
+<table class='table table-bordered table-condensed table-hover table-stripped'>
+  <thead>
+    <tr>
+      <th>Training Name</th>
+      <th>Trainer's Name</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <tr *ngFor="let training of trainingList | paginate: { itemsPerPage:1 , currentPage:p }">
+        <td>{{training.trainingName }}</td>
+        <td>{{training.trainerName}}</td>
+        <td>{{training.startDate}}</td>
+        <td>{{training.endDate}}</td>
+        <td>{{training.startTime}}</td>
+        <td>{{training.endTime}}</td>
+        <td>
+          <a class="btn" (click)="Edit(template,training)">
+            <i class="fas fa-edit" ></i>
+          </a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p=$event"></pagination-controls>
+<app-addparticipant></app-addparticipant>
+<app-add-que></app-add-que>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-success" [disabled]="addQuestionCmpt.questionList.length<2" (click)="onSubmit()">Submit</button>
+    <button type="button" class="btn btn-primary" (click)="onSave()">Save as draft</button>
+    <button type="button" class="btn btn-default" (click)="onCancel()">Cancel</button>
+</div>

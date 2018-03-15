@@ -1,0 +1,62 @@
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<button type="button" class="btn btn-primary" (click)="openModal(template)">ADD PARTICIPANT</button>
+    
+<ng-template #template>
+ <div class="modal-header">
+   <h4 class="modal-title pull-left">Select Participant</h4>
+   <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+     <span aria-hidden="true">&times;</span>
+   </button>
+ </div>
+ <div id="mainContainer">
+ <div class="table">
+    <thead class="thead-inverse">
+    <tr>
+
+      <th class="text-center">NAME</th>
+      <th class="text-center">EMAIL-ID</th>
+      <th class="text-center">CONTACT-NO</th>
+      <th><input type="checkbox" [(ngModel)]="selectedAll" (change)="selectAll()"></th> 
+    </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor="let participant of usersService.usersList">
+       <td class="text-center">{{participant.firstName}} {{participant.lastName}} </td>
+       <td class="text-center">{{participant.eMail}}</td>
+       <td class="text-center">{{participant.contactNo}}</td>
+       <td><input type="checkbox" [(ngModel)]="participant.selected" (change)="checkIfAllSelected()"></td>
+     </tr>
+   </tbody>
+   <div class="modal-footer">
+      <button class="btn btn-success" (click)="save()">SAVE</button>
+      <button class="btn btn-danger" id="btClear" (click)="modalRef.hide()">CANCEL</button>
+      </div>
+  </div>
+  </div>
+</ng-template>
+
+<table class='table table-bordered table-condensed table-hover table-stripped'> 
+    <thead>
+      <tr>
+        <th class="text-center">NAME</th>
+        <th class="text-center">EMAIL-ID</th>
+        <th class="text-center">CONTACT-NO</th>
+        <th class="text-center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let selpar of participantList; let i = index ">
+        <td class="text-center">{{selpar.firstName}} {{selpar.lastName}}</td>
+        <td class="text-center">{{selpar.eMail}}</td>
+        <td class="text-center">{{selpar.contactNo}}</td>
+        <td class="text-center">
+          <!-- <a (click)="removeUser(i)">Remove</a> -->
+          <a class="btn" (click)="removeUser(i)">
+          <i class="fas fa-trash" ></i>
+          </a>
+        </td>
+       </tr>
+    </tbody>
+    </table>
+    
+       

@@ -1,0 +1,43 @@
+
+<div class="menu">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <h1>
+                <a [routerLink]="['/dashboard']" >TAS</a>
+            </h1>
+        </div>
+        <div>
+            <div class="navbar-link">
+                <ul class="nav navbar-nav navbar-right">
+                    <h3>
+                        <nav>
+                            <div style="float: left;" >
+                                <a routerLink="/user-form">User-Managment</a>
+                                <br>
+                            </div>
+                            <div style="float: right;">
+                                <a routerLink="/training">Training</a>
+                            </div>
+                        </nav> 
+                    </h3>
+                </ul>
+                
+            </div>
+            <div class="nav navbar-nav navbar-right dropdown">
+                <button class="dropbtn">Admin</button>
+                <div class="dropdown-content ">
+                    <nav>
+                        <!-- <a routerLink="/editprofile">Edit-Profile</a> -->
+                        <a>
+                            <app-Editprofile></app-Editprofile>
+                        </a>
+                        <br>
+                        <a class="clickable" routerLink="/change-password">change-password</a><br>
+                        
+                        <a class="clickable" (click)="onLogout()">Logout</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

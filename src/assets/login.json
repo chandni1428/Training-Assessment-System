@@ -1,0 +1,40 @@
+{
+  "Login": [
+    {
+      "id": "1",
+      "name": "sonalprajapati@gmail.com",
+      "password": "sonal"
+    },
+    {
+      "id": "2",
+      "name": "admin@gmail.com",
+      "password": "sonu"
+    },
+    {
+      "id": "3",
+      "name": "sonalPrajapati@gmail.com",
+      "password": "prajapati"
+    }
+
+  ],
+  "edit": [
+    {
+      "id": "1",
+      "firstName": "sonal",
+      "lastName": "Parjapati",
+      "contactNo": "9510250764"
+    },
+    {
+      "id": "2",
+      "firstName": "priya",
+      "lastName": "patel",
+      "contactNo": "9157475856"
+    },
+    {
+      "id": "3",
+      "firstName": "shweta",
+      "lastName": "pate",
+      "contactNo": "7405540773"
+    }
+  ]
+}
